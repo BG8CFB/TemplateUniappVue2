@@ -1,19 +1,27 @@
-# my-alpha-project
+# TemplateUniAppVue2
 
-## Project setup
-```
-yarn install
-```
+## 用途：
 
-### Compiles and hot-reloads for development
 ```
-yarn serve
+用于开发app，ios，H5和各端小程序。
 ```
 
-### Compiles and minifies for production
+## 版本：
+
 ```
-yarn build
+alpha版3.3.1
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 开发模板
+
+```
+Vue2.6
+```
+
+### 插件：
+
+```
+UI插件：uView
+CSS预编译插件：sass, sass-loader@8.x, node-sass@4.14
+```
+

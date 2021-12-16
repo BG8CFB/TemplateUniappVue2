@@ -1,12 +1,37 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [
 		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
+		},
+		{
+			"path": "pages/uView/index",
+			"style": {
+				"navigationBarTitleText": "uView"
+			}
 		}
 	],
+	"tabBar": {
+		"color": "#6D6D6D",
+		"selectedColor": "#1981FF",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "index"
+			},
+			{
+				"pagePath": "pages/uView/index",
+				"text": "uView"
+			}
+		]
+	},
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",

@@ -9,14 +9,19 @@
 
 <script>
 	export default {
+    name:'',
+    onLoad() {
+      console.log('index uniapp onLoad');
+    },
+    created() {
+      console.log('index Vue created')
+    },
 		data() {
 			return {
 				title: 'Hello'
 			}
 		},
-		onLoad() {
-
-		},
+  
 		methods: {
 
 		}
