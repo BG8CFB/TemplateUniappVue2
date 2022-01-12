@@ -1,6 +1,10 @@
+const TransformPages = require('uni-read-pages')
+const {webpack} = new TransformPages()
 const {resolve} = require("path");
+
 module.exports = {
-  transpileDependencies: ["uview-ui"],
+  transpileDependencies: ['luch-request','uview-ui'],
+  
   chainWebpack: (config) => {
     config.resolve.alias.set('@', resolve('src'));
     // 发行或运行时启用了压缩时会生效
@@ -15,4 +19,17 @@ module.exports = {
       return args;
     });
   },
+  
+  configureWebpack: {
+    plugins: [
+      new webpack.DefinePlugin({
+        ROUTES: webpack.DefinePlugin.runtimeValue(() => {
+          const tfPages = new TransformPages({
+            includes: ['path', 'name', 'aliasPath']
+          });
+          return JSON.stringify(tfPages.routes)
+        }, true )
+      })
+    ]
+  }
 };
